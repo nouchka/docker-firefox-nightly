@@ -1,0 +1,10 @@
+firefox:
+  build: .
+  container_name: firefox_test
+  environment:
+    - DISPLAY=unix$DISPLAY
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+##    - ~/.firefox-nightly/:/home/developer/.mozilla/firefox
+  devices:
+    - "/dev/snd:/dev/snd"
